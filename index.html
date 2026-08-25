@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Lantern Philosophy</title>
+
+  <meta name="description"
+    content="The Lantern Philosophy seeks a freer, more conscious, and more livable world through reason, freedom, curiosity, experience, and creativity.">
+  <meta name="author" content="The Lantern Philosophy">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://lanternphi.org">
+  <link rel="icon" href="favicon.ico">
+
+  <meta name="theme-color" content="#E8A857">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Lantern Philosophy">
+  <meta property="og:description"
+    content="A philosophy of reason, freedom, curiosity, experience, creativity, and continuous discovery.">
+  <meta property="og:url" content="https://lanternphi.org">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Lantern Philosophy",
+    "url": "https://lanternphi.org",
+    "description": "A philosophy of reason, freedom, curiosity, experience, creativity, and continuous discovery."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0C1615;
+      --ink: #E3E8DF;
+      --flame: #E8A857;
+
+      --light1: #659ba9;
+      --light2: #9A86B5;
+      --light3: #D2A84E;
+      --light4: #C27689;
+      --light5: #69B99A;
+
+      --font-display: "Fraunces", serif;
+      --font-body: "Source Serif 4", serif;
+
+      --content-width: 640px;
+      --hero-width: 760px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: #0C1615;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    ::selection {
+      background: var(--flame);
+      color: var(--bg);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 1px solid var(--flame);
+      outline-offset: 4px;
+    }
+
+    body::before,
+    body::after {
+      position: fixed;
+      inset: 0;
+      content: "";
+      pointer-events: none;
+    }
+
+    body::before {
+      z-index: 5;
+      opacity: 0.035;
+      mix-blend-mode: overlay;
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23noise)'/></svg>");
+    }
+
+    body::after {
+      z-index: 1;
+      background:
+        radial-gradient(ellipse 900px 500px at 50% 0%,
+          color-mix(in srgb, var(--flame) 9%, transparent),
+          transparent 65%),
+        radial-gradient(ellipse 1200px 800px at 50% 100%,
+          rgba(0, 0, 0, 0.35),
+          transparent 60%);
+    }
+
+    .hero,
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero {
+      width: min(100%, var(--hero-width));
+      margin-inline: auto;
+      padding: clamp(3rem, 8vw, 5rem) 1.75rem 1.5rem;
+      text-align: center;
+    }
+
+    .content {
+      width: min(100%, var(--content-width));
+      margin-inline: auto;
+      padding: 0 1.75rem clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 380px;
+      height: 380px;
+      transform: translateX(-50%);
+      background:
+        radial-gradient(circle,
+          color-mix(in srgb, var(--flame) 16%, transparent),
+          color-mix(in srgb, var(--flame) 5%, transparent) 45%,
+          transparent 72%);
+      filter: blur(6px);
+      pointer-events: none;
+      animation: breathe 7s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+
+      0%,
+      100% {
+        opacity: 0.75;
+        transform: translateX(-50%) scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.05);
+      }
+    }
+
+    .logo {
+      display: block;
+      width: min(300px, 80vw);
+      height: auto;
+      margin: 0 auto 2rem;
+    }
+
+    .title {
+      margin: 0 0 1.75rem;
+      color: var(--flame);
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    .lede {
+      max-width: 640px;
+      margin-inline: auto;
+      color: var(--ink);
+      font-size: clamp(1.02rem, 1.6vw, 1.15rem);
+      line-height: 1.8;
+      text-align: left;
+      opacity: 0.92;
+    }
+
+    .block h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 0 0 1.15rem;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3.2vw, 1.95rem);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .block h2::before {
+      width: 6px;
+      height: 6px;
+      flex: 0 0 6px;
+      border-radius: 50%;
+      background: var(--flame);
+      box-shadow: 0 0 8px 1px color-mix(in srgb, var(--flame) 60%, transparent);
+      content: "";
+    }
+
+    .block p {
+      margin: 0 0 1.15rem;
+      color: var(--ink);
+      font-size: clamp(1rem, 1.5vw, 1.08rem);
+      line-height: 1.8;
+      opacity: 0.88;
+    }
+
+    .block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: clamp(3rem, 7vw, 4.5rem) 0;
+    }
+
+    .divider-intro {
+      margin-top: 0.75rem;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background:
+        linear-gradient(90deg,
+          transparent,
+          color-mix(in srgb, var(--flame) 40%, transparent),
+          transparent);
+    }
+
+    .divider-flame {
+      width: 13px;
+      height: 13px;
+      flex: 0 0 13px;
+      opacity: 0.85;
+    }
+
+    .lantern-list {
+      margin: 1.4rem 0 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid rgba(237, 227, 208, 0.1);
+    }
+
+    .lantern-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(237, 227, 208, 0.1);
+    }
+
+    .lantern-list p {
+      margin: 0;
+      font-size: clamp(1rem, 1.5vw, 1.08rem);
+      line-height: 1.75;
+      opacity: 0.9;
+    }
+
+    .lantern-list strong {
+      font-family: var(--font-display);
+      font-weight: 600;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      margin-top: 0.62rem;
+      border-radius: 50%;
+      box-shadow: 0 0 7px 1px currentColor;
+    }
+
+    .light1 {
+      color: var(--light1);
+    }
+
+    .light2 {
+      color: var(--light2);
+    }
+
+    .light3 {
+      color: var(--light3);
+    }
+
+    .light4 {
+      color: var(--light4);
+    }
+
+    .light5 {
+      color: var(--light5);
+    }
+
+    .footer {
+      padding: 2rem 1.75rem 3rem;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      text-align: center;
+      opacity: 0.55;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .hero-glow {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .hero,
+      .content {
+        padding-inline: 1.25rem;
+      }
+
+      .lantern-list li {
+        gap: 0.7rem;
+      }
+
+      .divider {
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <img src="logo.webp" alt="The Lantern Philosophy" class="logo" width="300" height="300" fetchpriority="high">
+
+    <h1 class="title">The Lantern Philosophy</h1>
+
+    <p class="lede">
+      The Lantern Philosophy begins with a simple belief: our minds are the lanterns we carry into the darkness. We do not seek to illuminate the world with final answers, but with reason, curiosity, and better questions. Through freedom, experience, creativity, and continuous discovery, we seek a freer, more conscious, and more livable world while remembering that no idea, including our own, should ever be beyond question.
+    </p>
+  </header>
+
+  <main class="content">
+
+    <div class="divider divider-intro" aria-hidden="true">
+      <span class="divider-line"></span>
+
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="five-lights-title">
+      <h2 id="five-lights-title">The Five Lights</h2>
+
+      <ol class="lantern-list">
+        <li>
+          <span class="dot light1" aria-hidden="true"></span>
+          <p>
+            <strong>1.</strong>
+            Even our light can be questioned.
+          </p>
+        </li>
+
+        <li>
+          <span class="dot light2" aria-hidden="true"></span>
+          <p>
+            <strong>2.</strong>
+            Freedom is the default.
+          </p>
+        </li>
+
+        <li>
+          <span class="dot light3" aria-hidden="true"></span>
+          <p>
+            <strong>3.</strong>
+            Reason determines the direction of the light.
+          </p>
+        </li>
+
+        <li>
+          <span class="dot light4" aria-hidden="true"></span>
+          <p>
+            <strong>4.</strong>
+            Every life has value.
+          </p>
+        </li>
+
+        <li>
+          <span class="dot light5" aria-hidden="true"></span>
+          <p>
+            <strong>5.</strong>
+            The horizon moves farther with every answer.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="manifesto-title">
+      <h2 id="manifesto-title">Manifesto</h2>
+      
+      <p>
+        <strong>Even our light can be questioned.</strong>
+        We may never reach an ultimate answer, but we will continue to investigate, question, learn, doubt, wonder, and
+        create.
+        We value reason and evidence while recognizing that our reasoning and methods are never infallible.
+        No idea, including our own, is exempt from criticism. Changing our views when stronger reasons emerge is not weakness,
+        but intellectual honesty.
+      </p>
+      
+      <p>
+        <strong>Freedom is the default.</strong>
+        Each person has the final say over their own life, body, gender, sexual orientation, beliefs, thoughts, and identity.
+        Different ways of living should be protected unless they cause serious harm to others.
+        We defend freedom of belief and neither affirm nor deny supernatural realities.
+        We remain open to questioning what we believe we know and to revising our understanding when stronger reasons emerge.
+      </p>
+      
+      <p>
+        <strong>Reason determines the direction of the light.</strong>
+        Diversity is a necessary richness for the development of thought.
+        Rather than silencing different ideas, we listen to, discuss, and examine them.
+        We support free participation, solidarity, collective decision-making, and consensus whenever possible rather than
+        hierarchical imposition.
+        We use reason, evidence, and open discussion to understand the world and seek better ways of living together.
+      </p>
+      
+      <p>
+        <strong>Every life has value.</strong>
+        We value the lives, conscious experiences, curiosity, and capacity for growth of humans and other living beings.
+        We do not see nature merely as a resource for human use.
+        We consider friendship, solidarity, sharing, socializing, and creating together to be important parts of human life.
+        A free individual does not have to be a solitary individual.
+      </p>
+      
+      <p>
+        <strong>The horizon moves farther with every answer.</strong>
+        Knowledge is not a point to be reached, but a direction we continue to move toward.
+        Every answer can give rise to a new question, and every discovery can reveal something still unknown.
+        We seek not a final truth, but a better understanding through reason, experience, curiosity, and continuous discovery.
+      </p>
+    </section>
+
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="lanterns-title">
+      <h2 id="lanterns-title">Lanterns</h2>
+
+      <p>
+        A Lantern is a light that helps illuminate the darkness.
+      </p>
+
+      <p>
+        For us, this light is reason, logic, knowledge, curiosity, and free thought. Lanterns do not seek to illuminate
+        the world with one great answer; they reveal errors, create new ideas, share knowledge, and explore the
+        possibility
+        of better conditions for life.
+      </p>
+    </section>
+
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="ethics-title">
+      <h2 id="ethics-title">Ethics</h2>
+
+      <p>
+        We value human beings and all living beings that hold ethical significance. We seek to preserve life, conscious
+        experience, free thought, curiosity, and the capacity for growth.
+      </p>
+
+      <p>
+        Our ethical understanding is not determined by tradition, authority, or personal belief alone. Our moral claims
+        should rest on reasons that can be examined by others and should be capable of changing in the face of evidence
+        and stronger reasons.
+      </p>
+
+      <p>
+        Freedom may be restricted only when there is a sufficiently strong risk of serious harm to another ethically
+        significant being. The reality of harm and the necessity of intervention must themselves be questioned and
+        supported by evidence.
+      </p>
+
+      <p>
+        This is not merely a list of ethical rules, but a method for determining how ethical thought should be formed.
+        The method itself can also be questioned.
+      </p>
+    </section>
+
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="purpose-title">
+      <h2 id="purpose-title">The Purpose of Life</h2>
+      
+      <p>
+        We do not believe that there is a single predetermined purpose of life for everyone.
+      </p>
+      
+      <p>
+        A person may discover, create, change, or never define their own purpose with certainty.
+        What matters is not finding a ready-made answer, but experiencing, learning, creating, loving, wondering, forming
+        connections, and freely searching for the path that gives meaning to their own life.
+        Through thought, experience, relationships, and creation, we can give shape and meaning to the lives we choose to
+        live.
+      </p>
+    </section>
+
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="effort-title">
+      <h2 id="effort-title">Effort and Value</h2>
+
+      <p>
+        The value of a work, idea, or achievement cannot be measured solely by its outcome.
+      </p>
+
+      <p>
+        Behind the outcome are learning, education, experience, failure, thought, time, and physical or mental effort.
+        Therefore, we seek the value of effort not only in the visible result, but in the entire process that made that
+        result possible.
+      </p>
+
+      <p>
+        The result is what is visible; effort is the story that made it possible.
+      </p>
+    </section>
+
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="closing-title">
+      <h2 id="closing-title">Carry the Lantern Forward</h2>
+
+      <p>
+        The Lantern Philosophy does not promise a perfect society, an unchanging morality, or an ultimate truth to be
+        reached.
+      </p>
+
+      <p>
+        It only asks us to keep walking:
+      </p>
+
+      <p>
+        <strong>Question. Listen. Experience. Doubt. Learn. Create. Change.</strong>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>
+      &copy; <span id="year"></span> The Lantern Philosophy. All rights reserved.
+    </p>
+  </footer>
+
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>
