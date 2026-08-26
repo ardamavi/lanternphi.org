@@ -177,6 +177,8 @@
     }
 
     .title {
+      position: relative;
+      display: inline-block;
       margin: 0 0 1.75rem;
       color: var(--flame);
       font-family: var(--font-display);
@@ -185,6 +187,19 @@
       font-style: italic;
       line-height: 1.1;
       letter-spacing: 0.02em;
+    }
+
+    .version {
+      position: absolute;
+      right: -0.25rem;
+      bottom: -1.5rem;
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 0.33em;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: 0.08em;
+      opacity: 0.75;
     }
 
     .lede {
@@ -316,6 +331,23 @@
       color: var(--light5);
     }
 
+    .contact-link {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: opacity 0.25s ease;
+    }
+
+    .contact-link:hover {
+      opacity: 0.7;
+    }
+
+    .contact-link:focus-visible {
+      outline: 1px solid var(--flame);
+      outline-offset: 4px;
+    }
+
     .footer {
       padding: 2rem 1.75rem 3rem;
       color: var(--ink);
@@ -364,7 +396,7 @@
 
     <img src="logo.webp" alt="The Lantern Philosophy" class="logo" width="300" height="300" fetchpriority="high">
 
-    <h1 class="title">The Lantern Philosophy</h1>
+    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.0</span></h1>
 
     <p class="lede">
       The Lantern Philosophy begins with a simple belief: our minds are the lanterns we carry into the darkness. We do not seek to illuminate the world with final answers, but with reason, curiosity, and better questions. Through freedom, experience, creativity, and continuous discovery, we seek a freer, more conscious, and more livable world while remembering that no idea, including our own, should ever be beyond question.
@@ -457,6 +489,8 @@
       <p>
         <strong>Freedom is the default.</strong>
         Each person has the final say over their own life, body, gender, sexual orientation, beliefs, thoughts, and identity.
+        We reject imposed hierarchy and favor free participation, voluntary cooperation, and collective decision-making over
+        authority and domination.
         Different ways of living should be protected unless they cause serious harm to others.
         We defend freedom of belief and neither affirm nor deny supernatural realities.
         We remain open to questioning what we believe we know and to revising our understanding when stronger reasons emerge.
@@ -464,11 +498,10 @@
       
       <p>
         <strong>Reason determines the direction of the light.</strong>
-        Diversity is a necessary richness for the development of thought.
-        Rather than silencing different ideas, we listen to, discuss, and examine them.
-        We support free participation, solidarity, collective decision-making, and consensus whenever possible rather than
-        hierarchical imposition.
-        We use reason, evidence, and open discussion to understand the world and seek better ways of living together.
+        We examine ideas without prejudice, regardless of where they come from. We break them down, examine their parts through
+        evidence and reason, and bring them together again to understand the whole. We move between the particular and the
+        general, discuss alternatives, and seek common ground or the strongest conclusion available. Any conclusion may be
+        questioned again and changed when better reasons emerge. The same principle applies to collective decisions: we favor voluntary cooperation, open participation, and consensus where possible, while allowing decisions and procedures themselves to be questioned and revised.
       </p>
       
       <p>
@@ -530,8 +563,10 @@
       <h2 id="ethics-title">Ethics</h2>
 
       <p>
-        We value human beings and all living beings that hold ethical significance. We seek to preserve life, conscious
-        experience, free thought, curiosity, and the capacity for growth.
+        We value human beings and other living beings, giving greater ethical consideration to those capable of conscious
+        experience, suffering, well-being, or having interests of their own. We also value the integrity and continuity of the
+        natural world and its living systems. We seek to preserve life, conscious experience, free thought, curiosity, and the
+        capacity for growth.
       </p>
 
       <p>
@@ -542,8 +577,8 @@
 
       <p>
         Freedom may be restricted only when there is a sufficiently strong risk of serious harm to another ethically
-        significant being. The reality of harm and the necessity of intervention must themselves be questioned and
-        supported by evidence.
+        significant being. Serious harm may be physical, psychological, or a substantial impairment of well-being.
+        Our understanding of harm should be informed by concrete cases and remain open to revision as new evidence and experience emerge.
       </p>
 
       <p>
@@ -566,15 +601,30 @@
 
     <section class="block" aria-labelledby="purpose-title">
       <h2 id="purpose-title">The Purpose of Life</h2>
-      
+    
       <p>
         We do not believe that there is a single predetermined purpose of life for everyone.
       </p>
-      
+
+      <p>
+        We do not know with certainty what, if anything, follows death. Based on our current understanding of consciousness as a
+        process arising from the functioning of the living brain, our strongest working view is that when that process ends,
+        there is no conscious experience afterward, but this conclusion remains open to question and revision.
+      </p>
+    
       <p>
         A person may discover, create, change, or never define their own purpose with certainty.
         What matters is not finding a ready-made answer, but experiencing, learning, creating, loving, wondering, forming
         connections, and freely searching for the path that gives meaning to their own life.
+      </p>
+    
+      <p>
+        Creativity allows us not only to understand and experience the world, but to give something new back to it.
+        Art is one of the ways we explore existence, express what we experience, and find beauty and meaning in being alive.
+        Beauty may not have a single objective definition, yet our experience of it can still be meaningful.
+      </p>
+    
+      <p>
         Through thought, experience, relationships, and creation, we can give shape and meaning to the lives we choose to
         live.
       </p>
@@ -610,32 +660,74 @@
       </p>
     </section>
 
-
     <div class="divider" aria-hidden="true">
       <span class="divider-line"></span>
-
+    
       <svg class="divider-flame" viewBox="0 0 24 24">
         <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
       </svg>
-
+    
       <span class="divider-line"></span>
     </div>
 
+    <section class="block" aria-labelledby="guiding-lights-title">
+      <h2 id="guiding-lights-title">Intellectual Lineage</h2>
+    
+      <p>
+        Our path is illuminated by many thinkers and traditions: John Stuart Mill, David Hume, Charles Darwin, Karl Popper,
+        Thomas Kuhn, Daniel Dennett, Peter Singer, Carl Sagan, anarchist thought, humanism, existentialism, pragmatism, and
+        Bayesian reasoning. We do not treat any of them as authorities, but as sources of ideas to examine, question, combine,
+        and revise.
+      </p>
+    </section>
 
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+    
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+    
+      <span class="divider-line"></span>
+    </div>
+    
+    
     <section class="block" aria-labelledby="closing-title">
       <h2 id="closing-title">Carry the Lantern Forward</h2>
-
+    
       <p>
         The Lantern Philosophy does not promise a perfect society, an unchanging morality, or an ultimate truth to be
         reached.
       </p>
-
+    
       <p>
         It only asks us to keep walking:
       </p>
-
+    
       <p>
         <strong>Question. Listen. Experience. Doubt. Learn. Create. Change.</strong>
+      </p>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+    
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+    
+      <span class="divider-line"></span>
+    </div>
+    
+    
+    <section class="block" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+    
+      <p>
+        For questions, ideas, criticism, or anything else, you can reach us at
+        <a class="contact-link" href="mailto:contact@lanternphi.org">
+          contact@lanternphi.org
+        </a>
       </p>
     </section>
 
