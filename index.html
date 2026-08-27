@@ -361,6 +361,78 @@
       margin: 0;
     }
 
+    .contents {
+      margin: 0 0 0.5rem;
+      padding: 1.1rem 0 1.2rem;
+      border-top: 1px solid rgba(237, 227, 208, 0.1);
+      border-bottom: 1px solid rgba(237, 227, 208, 0.1);
+    }
+
+    .contents h2 {
+      margin: 0 0 0.8rem;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contents-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.9rem;
+    }
+
+    .contents-links a {
+      color: color-mix(in srgb, var(--flame) 62%, transparent);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contents-links a::after {
+      margin-left: 0.9rem;
+      color: var(--flame);
+      content: "·";
+      color: color-mix(in srgb, var(--flame) 35%, transparent);
+    }
+
+    .contents-links a:last-child::after {
+      display: none;
+    }
+
+    .contents-links a:hover {
+      color: var(--flame);
+    }
+
+    .contents-links a:focus-visible {
+      outline: 1px solid var(--flame);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 480px) {
+      .contents {
+        padding: 1rem 0 1.1rem;
+      }
+
+      .contents-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem 1rem;
+      }
+
+      .contents-links a {
+        font-size: 0.88rem;
+      }
+
+      .contents-links a::after {
+        display: none;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -396,7 +468,7 @@
 
     <img src="logo.webp" alt="The Lantern Philosophy" class="logo" width="300" height="300" fetchpriority="high">
 
-    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.1</span></h1>
+    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.2</span></h1>
 
     <p class="lede">
       The Lantern Philosophy begins with a simple belief: our minds are the lanterns we carry into the darkness. We do not seek to illuminate the world with final answers, but with reason, curiosity, and better questions. Through freedom, experience, creativity, and continuous discovery, we seek a freer, more conscious, and more livable world while remembering that no idea, including our own, should ever be beyond question.
@@ -404,6 +476,24 @@
   </header>
 
   <main class="content">
+
+    <nav class="contents" aria-label="Page sections">
+      <h2>Contents</h2>
+    
+      <div class="contents-links">
+        <a href="#five-lights-title">The Five Lights</a>
+        <a href="#manifesto-title">Manifesto</a>
+        <a href="#lanterns-title">Lanterns</a>
+        <a href="#ethics-title">Ethics</a>
+        <a href="#purpose-title">The Purpose of Life</a>
+        <a href="#effort-title">Effort and Value</a>
+        <a href="#guiding-lights-title">Intellectual Lineage</a>
+        <a href="#closing-title">Carry the Lantern Forward</a>
+        <a href="#contact-title">Join the Conversation</a>
+      </div>
+    </nav>
+
+    <br/>
 
     <div class="divider divider-intro" aria-hidden="true">
       <span class="divider-line"></span>
@@ -476,19 +566,23 @@
 
     <section class="block" aria-labelledby="manifesto-title">
       <h2 id="manifesto-title">Manifesto</h2>
+
+      <p>
+        The way we understand the world shapes the way we live in it. How we seek knowledge influences how we make decisions; how we make decisions shapes how we treat others; and how we live shapes the meaning we create.
+      </p>
       
       <p>
         <strong>Even our light can be questioned.</strong>
         We may never reach an ultimate answer, but we will continue to investigate, question, learn, doubt, wonder, and
         create.
-        We value reason and evidence while recognizing that our reasoning and methods are never infallible.
+        We value reason and evidence while recognizing that our reasoning and methods are never infallible. We treat our principles as reasoned starting points, not unquestionable truths, and keep them open to criticism and revision.
         No idea, including our own, is exempt from criticism. Changing our views when stronger reasons emerge is not weakness,
         but intellectual honesty.
       </p>
       
       <p>
         <strong>Freedom is the default.</strong>
-        Each person has the final say over their own life, body, gender, sexual orientation, beliefs, thoughts, and identity.
+        We believe that people naturally seek to grow, develop, pursue what they value, and shape their lives, and we seek to create the freedom and space for them to do so. Each person has the final say over their own life, body, gender, sexual orientation, beliefs, thoughts, and identity.
         We reject imposed hierarchy and favor free participation, voluntary cooperation, and collective decision-making over
         authority and domination.
         Different ways of living should be protected unless they cause serious harm to others.
@@ -498,10 +592,7 @@
       
       <p>
         <strong>Reason determines the direction of the light.</strong>
-        We examine ideas without prejudice, regardless of where they come from. We break them down, examine their parts through
-        evidence and reason, and bring them together again to understand the whole. We move between the particular and the
-        general, discuss alternatives, and seek common ground or the strongest conclusion available. Any conclusion may be
-        questioned again and changed when better reasons emerge. The same principle applies to collective decisions: we favor voluntary cooperation, open participation, and consensus where possible, while allowing decisions and procedures themselves to be questioned and revised.
+        We examine ideas without prejudice, regardless of where they come from. We break them down, examine their parts through evidence and reason, question their assumptions, compare them with experience and alternative explanations, and bring them together again to understand the whole. We move between the particular and the general, discuss alternatives, and seek common ground or the strongest conclusion available. Any conclusion may be questioned again and changed when better reasons emerge. The same principle applies to collective decisions: we favor voluntary cooperation, open participation, and consensus where possible, while allowing decisions and procedures themselves to be questioned and revised.
       </p>
       
       <p>
@@ -563,10 +654,7 @@
       <h2 id="ethics-title">Ethics</h2>
 
       <p>
-        We value human beings and other living beings, giving greater ethical consideration to those capable of conscious
-        experience, suffering, well-being, or having interests of their own. We also value the integrity and continuity of the
-        natural world and its living systems. We seek to preserve life, conscious experience, free thought, curiosity, and the
-        capacity for growth.
+        We value human beings and all life, giving greater ethical consideration to beings we have reason to believe are capable of experience, well-being, or pursuing interests of their own. We also value the integrity and continuity of the natural world and its living systems. We seek to preserve life, freedom, growth, and the conditions for living beings to flourish.
       </p>
 
       <p>
@@ -685,11 +773,14 @@
       <h2 id="guiding-lights-title">Intellectual Lineage</h2>
     
       <p>
-        Our path is illuminated by many thinkers and traditions: John Stuart Mill, David Hume, Charles Darwin, Karl Popper,
-        Thomas Kuhn, Daniel Dennett, Peter Singer, Carl Sagan, anarchist thought, humanism, existentialism, pragmatism, and
-        Bayesian reasoning. We do not treat any of them as authorities, but as sources of ideas to examine, question, combine,
-        and revise.
+        Our path is illuminated by many thinkers and traditions: René Descartes, John Stuart Mill, Aristotle, David Hume, Charles Darwin, Karl Popper,
+        Thomas Kuhn, Daniel Dennett, Peter Singer, Carl Sagan, anarchist thought, humanism, existentialism, pragmatism, and Bayesian reasoning. We do not treat any of them as authorities, but as sources of ideas to examine, question, combine, and revise.
       </p>
+
+      <p>
+        The Lantern Philosophy builds on ideas from many traditions. It brings different traditions into conversation and explores how they might work together within a coherent, revisable framework.
+      </p>
+
     </section>
 
     <div class="divider" aria-hidden="true">
@@ -707,12 +798,11 @@
       <h2 id="closing-title">Carry the Lantern Forward</h2>
     
       <p>
-        The Lantern Philosophy does not promise a perfect society, an unchanging morality, or an ultimate truth to be
-        reached.
+        The Lantern Philosophy is an attempt to build a framework for thinking, living, and acting toward a better life, guided by what we learn and always open to growth, discovery, and new possibilities.
       </p>
     
       <p>
-        It only asks us to keep walking:
+        The path has no fixed end. We carry the light forward by remaining curious, thinking together, and leaving room for what we have yet to discover.
       </p>
     
       <p>
