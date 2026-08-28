@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap"
     rel="stylesheet">
 
   <style>
@@ -244,6 +244,27 @@
 
     .block p:last-child {
       margin-bottom: 0;
+    }
+
+    .block h3 {
+      margin: 2rem 0 0.75rem;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+    }
+
+    .block h3:first-child {
+      margin-top: 0;
+    }
+
+    .block p strong,
+    .lede strong {
+      font-weight: 700;
+      opacity: 1;
     }
 
     .divider {
@@ -541,7 +562,7 @@
 
     <img src="logo.webp" alt="The Lantern Philosophy" class="logo" width="300" height="300" fetchpriority="high">
 
-    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.4</span></h1>
+    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.5</span></h1>
 
     <p class="lede">
       The Lantern Philosophy is a living, evolving framework that begins with a simple belief: our minds are the lanterns we carry into the darkness. We do not seek to illuminate the world with final answers, but with reason, curiosity, and better questions. Through freedom, experience, creativity, and continuous discovery, we seek a freer, more conscious, and more livable world while remembering that no idea, including our own, should ever be beyond question.
@@ -587,7 +608,7 @@
           <span class="dot light1" aria-hidden="true"></span>
           <p>
             <strong>1.</strong>
-            Even our light can be questioned.
+            Question the light.
           </p>
         </li>
 
@@ -595,7 +616,7 @@
           <span class="dot light2" aria-hidden="true"></span>
           <p>
             <strong>2.</strong>
-            Freedom is the default.
+            Begin with freedom.
           </p>
         </li>
 
@@ -603,7 +624,7 @@
           <span class="dot light3" aria-hidden="true"></span>
           <p>
             <strong>3.</strong>
-            Reason determines the direction of the light.
+            Follow the reasons.
           </p>
         </li>
 
@@ -611,7 +632,7 @@
           <span class="dot light4" aria-hidden="true"></span>
           <p>
             <strong>4.</strong>
-            Life has value.
+            Let life matter.
           </p>
         </li>
 
@@ -619,7 +640,7 @@
           <span class="dot light5" aria-hidden="true"></span>
           <p>
             <strong>5.</strong>
-            The horizon moves farther with every answer.
+            Keep moving beyond the answer.
           </p>
         </li>
       </ol>
@@ -645,7 +666,7 @@
       </p>
       
       <p>
-        <strong>Even our light can be questioned.</strong>
+        <strong>Question the light.</strong>
         We may never reach an ultimate answer, but we will continue to investigate, question, learn, doubt, wonder, and
         create.
         We value reason and evidence while recognizing that our reasoning and methods are never infallible. We treat our principles as reasoned starting points, not unquestionable truths, and keep them open to criticism and revision.
@@ -654,19 +675,19 @@
       </p>
       
       <p>
-        <strong>Freedom is the default.</strong>
+        <strong>Begin with freedom.</strong>
         We believe that every person has a natural desire to grow, develop, pursue what they value, and shape their lives, and we seek to create the freedom and space for them to do so. Each person has the final say over their own life, body, gender, sexual orientation, beliefs, thoughts, and identity.
         We trust people before treating them as potential wrongdoers, and favor voluntary cooperation and local self-governance over imposed authority.
         Different ways of living should be protected unless they cause serious harm to others. We defend freedom of belief and neither affirm nor deny supernatural realities. We remain open to questioning what we believe we know and to revising our understanding when stronger reasons emerge.
       </p>
       
       <p>
-        <strong>Reason determines the direction of the light.</strong>
+        <strong>Follow the reasons.</strong>
         We examine ideas without prejudice, regardless of where they come from. We break them down, examine their parts through evidence and reason, question their assumptions, compare them with experience and alternative explanations, and bring them together again to understand the whole. We move between the particular and the general, discuss alternatives, and seek common ground or the strongest conclusion available. Any conclusion may be questioned again and changed when better reasons emerge. The same principle applies to collective decisions: we favor voluntary cooperation, open participation, and consensus where possible, while allowing decisions and procedures themselves to be questioned and revised.
       </p>
       
       <p>
-        <strong>Life has value.</strong>
+        <strong>Let life matter.</strong>
         We value life and the living world.
         We do not see nature merely as a resource for human use.
         We consider friendship, solidarity, sharing, socializing, and creating together to be important parts of human life.
@@ -674,7 +695,7 @@
       </p>
       
       <p>
-        <strong>The horizon moves farther with every answer.</strong>
+        <strong>Keep moving beyond the answer.</strong>
         Knowledge is not a point to be reached, but a direction we continue to move toward.
         Every answer can give rise to a new question, and every discovery can reveal something still unknown.
         We seek not a final truth, but a better understanding through reason, experience, curiosity, and continuous discovery.
@@ -760,12 +781,7 @@
       </p>
 
       <p>
-        Freedom does not require justification; restricting it does. We should not treat people as potential wrongdoers or limit
-        their choices simply because harm is possible. When there is a serious and well-supported risk of harm to another
-        ethically significant being, we first seek voluntary, cooperative, and locally developed ways of addressing it, favoring
-        solutions shaped as closely as possible by the people affected. If intervention becomes necessary, it should be limited
-        to what the situation reasonably requires. We consider the seriousness, scope, duration, and reversibility of the harm,
-        while seeking alternatives that can protect, repair, or support those affected without unnecessarily reducing freedom.
+        We believe freedom should begin with trust, not suspicion. We should not treat people as potential wrongdoers or limit their choices simply because harm is possible. When there is a serious and well-supported risk of harm to another ethically significant being, we first seek voluntary, cooperative, and locally developed ways of addressing it, favoring solutions shaped as closely as possible by the people affected. If intervention becomes necessary, it should be limited to what the situation reasonably requires. We consider the seriousness, scope, duration, and reversibility of the harm, while seeking alternatives that can protect, repair, or support those affected without unnecessarily reducing freedom.
       </p>
 
       <p>
@@ -788,15 +804,32 @@
 
     <section class="block" aria-labelledby="purpose-title">
       <h2 id="purpose-title">The Purpose of Life</h2>
-    
+
       <p>
-        We do not believe that there is a single predetermined purpose of life for everyone.
+        We believe it is still too early to reach firm conclusions about consciousness and the nature of human agency, including
+        free will. The evidence available so far is not sufficient for us to reach a definitive conclusion. We expect our
+        understanding of these questions to develop as neuroscience, cognitive science, and artificial intelligence advance.
       </p>
 
       <p>
         We do not know with certainty what, if anything, follows death. Based on our current understanding of consciousness as a
         process arising from the functioning of the living brain, our strongest working view is that when that process ends,
         there is no conscious experience afterward, but this conclusion remains open to question and revision.
+      </p>
+
+      <p>
+        We also acknowledge that we do not know whether the universe has an ultimate meaning.
+      </p>
+
+      <p>
+        Given the limits of human understanding, we remain cautious about judging people for uncertainty about questions we may
+        not yet be able to answer.
+      </p>
+
+      <p>
+        We believe that greater understanding of these questions may help us better understand the purpose of life. Given what
+        we currently understand about the brain and consciousness, we do not believe that there is a single predetermined
+        purpose of life for everyone.
       </p>
     
       <p>
@@ -829,17 +862,6 @@
     </div>
 
 
-    <div class="divider" aria-hidden="true">
-      <span class="divider-line"></span>
-    
-      <svg class="divider-flame" viewBox="0 0 24 24">
-        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
-      </svg>
-    
-      <span class="divider-line"></span>
-    </div>
-
-
     <section class="block" aria-labelledby="applications-title">
       <h2 id="applications-title">Applications</h2>
     
@@ -849,11 +871,11 @@
         directions we currently find especially worth pursuing.
       </p>
     
+
+      <h3>Technology, Work, and Prosperity.</h3>
       <p>
-        <strong>Technology, Work, and Prosperity.</strong><br/>
         We want technological progress, including artificial intelligence and automation, to expand human freedom.
-        As technology allows us to produce more with less human labor, we believe its benefits should be shared widely,
-        so that people can spend less of their lives working merely to meet basic needs.
+        As technology allows us to produce more with less human labor, we believe its benefits should be used so that people can spend less of their lives working merely to meet basic needs.
       </p>
 
       <p>
@@ -862,8 +884,9 @@
         lives can create more space for learning, creating, caring, and pursuing what they value.
       </p>
 
+
+      <h3>Value, Effort, and Creation.</h3>
       <p>
-        <strong>Value, Effort, and Creation.</strong><br/>
         We believe that understanding value requires looking beyond what is immediately visible. Outcomes matter, but they do
         not tell the whole story. The value of a work, idea, or achievement cannot be measured solely by its outcome. Behind
         every result are learning, education, experience, failure, thought, time, and physical or mental effort.
@@ -873,8 +896,9 @@
         We therefore seek value not only in what is achieved, but also in the process that made achievement possible.
       </p>
     
+
+      <h3>Population, Food, and the Living World.</h3>
       <p>
-        <strong>Population, Food, and the Living World.</strong><br />
         Human population, consumption, and the way we produce food place real pressures on the living world. These pressures
         should be considered when making decisions about the future, especially as population and resource demands continue
         to change.
@@ -893,9 +917,11 @@
         leaving room for further evidence and individual circumstances.
       </p>
     
+
+      <h3>Education and Access to Knowledge.</h3>
       <p>
-        <strong>Education and Access to Knowledge.</strong><br />
-        A community cannot meaningfully improve itself if its members are prevented from learning no matter what system they are using. Education develops the ability to question, understand evidence, participate in decisions, and shape one's own life.
+        A community cannot meaningfully improve itself if its members are prevented from learning, regardless of how that
+        community is organized. Education develops the ability to question, understand evidence, participate in decisions, and shape one's own life.
       </p>
     
       <p>
@@ -903,9 +929,10 @@
         wherever possible. Knowledge created for the public should not be unnecessarily kept beyond the reach of the public.
       </p>
     
+
+      <h3>Health and Basic Needs.</h3>
       <p>
-        <strong>Health and Basic Needs.</strong><br />
-        We believe that access to essential health care and basic needs should be seen as community responsibility. How this responsibility is organized should remain open to experimentation, local decision-making, and revision as communities learn what works best.
+        We believe everyone should have reliable access to the basic conditions needed to live and exercise meaningful freedom, including essential health care, food, shelter, and education. How this responsibility is organized should remain open to experimentation, local decision-making, and revision as communities learn what works best.
       </p>
 
     </section>
@@ -927,7 +954,11 @@
     
       <p>
         Our path is illuminated by many thinkers and traditions: René Descartes, John Stuart Mill, Aristotle, David Hume, Charles Darwin, Karl Popper,
-        Thomas Kuhn, Daniel Dennett, Peter Singer, Carl Sagan, anarchist thought, humanism, existentialism, pragmatism, and Bayesian reasoning. We do not treat any of them as authorities, but as sources of ideas to examine, question, combine, and revise.
+        Thomas Kuhn, Daniel Dennett, Peter Singer, Carl Sagan, anarchist thought, humanism, existentialism, pragmatism, utilitarian thought, and Bayesian reasoning.
+      </p>
+
+      <p>
+        We do not treat any of them as authorities, but as sources of ideas to examine, question, combine, and revise. They offer ways of thinking about reason, freedom, knowledge, ethics, human flourishing, and the consequences of our choices.
       </p>
 
     </section>
