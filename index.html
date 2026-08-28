@@ -436,7 +436,8 @@
 
       .contents-links {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(var(--rows, 5), auto);
         gap: 0.35rem 1rem;
       }
 
@@ -540,10 +541,10 @@
 
     <img src="logo.webp" alt="The Lantern Philosophy" class="logo" width="300" height="300" fetchpriority="high">
 
-    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.3</span></h1>
+    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.4</span></h1>
 
     <p class="lede">
-      The Lantern Philosophy begins with a simple belief: our minds are the lanterns we carry into the darkness. We do not seek to illuminate the world with final answers, but with reason, curiosity, and better questions. Through freedom, experience, creativity, and continuous discovery, we seek a freer, more conscious, and more livable world while remembering that no idea, including our own, should ever be beyond question.
+      The Lantern Philosophy is a living, evolving framework that begins with a simple belief: our minds are the lanterns we carry into the darkness. We do not seek to illuminate the world with final answers, but with reason, curiosity, and better questions. Through freedom, experience, creativity, and continuous discovery, we seek a freer, more conscious, and more livable world while remembering that no idea, including our own, should ever be beyond question.
     </p>
   </header>
 
@@ -559,8 +560,8 @@
         <a href="#how-we-think-title">How We Think</a>
         <a href="#ethics-title">Ethics</a>
         <a href="#purpose-title">The Purpose of Life</a>
-        <a href="#effort-title">Effort and Value</a>
-        <a href="#guiding-lights-title">Intellectual Lineage</a>
+        <a href="#applications-title">Applications</a>
+        <a href="#intellectual-lineage-title">Intellectual Lineage</a>
         <a href="#closing-title">Carry the Lantern Forward</a>
         <a href="#contact-title">Join the Conversation</a>
       </div>
@@ -759,17 +760,12 @@
       </p>
 
       <p>
-        Freedom should be restricted only when necessary to prevent serious harm to another ethically significant being.
-        We prefer the least restrictive response capable of addressing the harm, and remain open to revising our understanding
-        as evidence and experience emerge.
-      </p>
-
-      <p>
-        When our principles come into conflict, we examine the concrete situation rather than applying any principle
-        mechanically. We consider the seriousness, scope, duration, and reversibility of the consequences, while looking for
-        alternatives that can reduce harm without unnecessarily limiting freedom. We favor the least restrictive solution
-        capable of preventing serious harm, and remain open to revising our decisions when better evidence or better
-        alternatives emerge.
+        Freedom does not require justification; restricting it does. We should not treat people as potential wrongdoers or limit
+        their choices simply because harm is possible. When there is a serious and well-supported risk of harm to another
+        ethically significant being, we first seek voluntary, cooperative, and locally developed ways of addressing it, favoring
+        solutions shaped as closely as possible by the people affected. If intervention becomes necessary, it should be limited
+        to what the situation reasonably requires. We consider the seriousness, scope, duration, and reversibility of the harm,
+        while seeking alternatives that can protect, repair, or support those affected without unnecessarily reducing freedom.
       </p>
 
       <p>
@@ -833,26 +829,87 @@
     </div>
 
 
-    <section class="block" aria-labelledby="effort-title">
-      <h2 id="effort-title">Effort and Value</h2>
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+    
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+    
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="applications-title">
+      <h2 id="applications-title">Applications</h2>
+    
+      <p>
+        The Lantern Philosophy is not a fixed list of political or personal rules. Its principles can lead to practical
+        preferences, but each application remains open to criticism and revision. The following are some
+        directions we currently find especially worth pursuing.
+      </p>
+    
+      <p>
+        <strong>Technology, Work, and Prosperity.</strong><br/>
+        We want technological progress, including artificial intelligence and automation, to expand human freedom.
+        As technology allows us to produce more with less human labor, we believe its benefits should be shared widely,
+        so that people can spend less of their lives working merely to meet basic needs.
+      </p>
 
       <p>
+        We believe people should have greater freedom to choose work they find meaningful, useful, or enjoyable.
+        Systems that reduce unnecessary economic dependence and give people and communities greater control over their
+        lives can create more space for learning, creating, caring, and pursuing what they value.
+      </p>
+
+      <p>
+        <strong>Value, Effort, and Creation.</strong><br/>
         We believe that understanding value requires looking beyond what is immediately visible. Outcomes matter, but they do
-        not tell the whole story.
+        not tell the whole story. The value of a work, idea, or achievement cannot be measured solely by its outcome. Behind
+        every result are learning, education, experience, failure, thought, time, and physical or mental effort.
       </p>
-
-      <p>
-        The value of a work, idea, or achievement cannot be measured solely by its outcome. Behind every result are learning, education, experience, failure, thought, time, and physical or mental effort.
-      </p>
-
+      
       <p>
         We therefore seek value not only in what is achieved, but also in the process that made achievement possible.
       </p>
-
+    
       <p>
-        The result is what is visible; effort is the story that made it possible.
+        <strong>Population, Food, and the Living World.</strong><br />
+        Human population, consumption, and the way we produce food place real pressures on the living world. These pressures
+        should be considered when making decisions about the future, especially as population and resource demands continue
+        to change.
       </p>
+    
+      <p>
+        We support voluntary access to accurate information, education, and family planning rather than coercive population
+        control. People should remain free to decide whether and when to have children, while having access to the knowledge
+        needed to understand the consequences of those choices.
+      </p>
+    
+      <p>
+        Food should be considered in the same wider context. We should examine nutrition, animal welfare, environmental
+        impact, resource use, culture, and accessibility together rather than treating one dietary choice as universally
+        correct. Current evidence gives us strong reasons to explore more sustainable and plant-rich food systems, while
+        leaving room for further evidence and individual circumstances.
+      </p>
+    
+      <p>
+        <strong>Education and Access to Knowledge.</strong><br />
+        A community cannot meaningfully improve itself if its members are prevented from learning no matter what system they are using. Education develops the ability to question, understand evidence, participate in decisions, and shape one's own life.
+      </p>
+    
+      <p>
+        We therefore support broad access to education and knowledge, including freely accessible educational materials
+        wherever possible. Knowledge created for the public should not be unnecessarily kept beyond the reach of the public.
+      </p>
+    
+      <p>
+        <strong>Health and Basic Needs.</strong><br />
+        We believe that access to essential health care and basic needs should be seen as community responsibility. How this responsibility is organized should remain open to experimentation, local decision-making, and revision as communities learn what works best.
+      </p>
+
     </section>
+
 
     <div class="divider" aria-hidden="true">
       <span class="divider-line"></span>
@@ -864,8 +921,9 @@
       <span class="divider-line"></span>
     </div>
 
-    <section class="block" aria-labelledby="guiding-lights-title">
-      <h2 id="guiding-lights-title">Intellectual Lineage</h2>
+
+    <section class="block" aria-labelledby="intellectual-lineage-title">
+      <h2 id="intellectual-lineage-title">Intellectual Lineage</h2>
     
       <p>
         Our path is illuminated by many thinkers and traditions: René Descartes, John Stuart Mill, Aristotle, David Hume, Charles Darwin, Karl Popper,
@@ -940,6 +998,13 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const contentsLinks = document.querySelector(".contents-links");
+
+    if (contentsLinks) {
+      const rows = Math.ceil(contentsLinks.children.length / 2);
+      contentsLinks.style.setProperty("--rows", rows);
+    }
 
     const toTop = document.getElementById("toTop");
 
