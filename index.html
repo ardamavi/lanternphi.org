@@ -254,7 +254,7 @@
     }
 
     .divider-intro {
-      margin-top: 0.75rem;
+      margin-top: 3rem;
       margin-bottom: clamp(2rem, 4vw, 3rem);
     }
 
@@ -361,6 +361,23 @@
       margin: 0;
     }
 
+    .footer a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 35%, transparent);
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .footer a:hover {
+      color: var(--flame);
+      border-color: color-mix(in srgb, var(--flame) 55%, transparent);
+    }
+
+    .footer a:focus-visible {
+      outline: 1px solid var(--flame);
+      outline-offset: 3px;
+    }
+
     .contents {
       margin: 0 0 0.5rem;
       padding: 1.1rem 0 1.2rem;
@@ -395,7 +412,6 @@
 
     .contents-links a::after {
       margin-left: 0.9rem;
-      color: var(--flame);
       content: "·";
       color: color-mix(in srgb, var(--flame) 35%, transparent);
     }
@@ -431,19 +447,6 @@
       .contents-links a::after {
         display: none;
       }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .hero-glow {
-        animation: none;
-      }
-    }
-
-    @media (max-width: 480px) {
 
       .hero,
       .content {
@@ -458,6 +461,75 @@
         gap: 0.75rem;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .hero-glow {
+        animation: none;
+      }
+    }
+
+    .to-top {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 10;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid color-mix(in srgb, var(--flame) 30%, transparent);
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--bg) 55%, transparent);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.25s ease, visibility 0.3s ease;
+    }
+
+    .to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .to-top:hover {
+      border-color: color-mix(in srgb, var(--flame) 60%, transparent);
+    }
+
+    .to-top:focus-visible {
+      outline: 1px solid var(--flame);
+      outline-offset: 3px;
+    }
+
+    .to-top svg {
+      width: 16px;
+      height: 16px;
+      stroke: color-mix(in srgb, var(--ink) 75%, transparent);
+    }
+
+    @media (max-width: 480px) {
+      .to-top {
+        right: 1rem;
+        bottom: 1rem;
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .to-top {
+        transition: opacity 0.15s ease, visibility 0.15s ease;
+      }
+    }
+
   </style>
 </head>
 
@@ -468,7 +540,7 @@
 
     <img src="logo.webp" alt="The Lantern Philosophy" class="logo" width="300" height="300" fetchpriority="high">
 
-    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.2</span></h1>
+    <h1 class="title">The Lantern Philosophy<span class="version">Version: 1.3</span></h1>
 
     <p class="lede">
       The Lantern Philosophy begins with a simple belief: our minds are the lanterns we carry into the darkness. We do not seek to illuminate the world with final answers, but with reason, curiosity, and better questions. Through freedom, experience, creativity, and continuous discovery, we seek a freer, more conscious, and more livable world while remembering that no idea, including our own, should ever be beyond question.
@@ -484,6 +556,7 @@
         <a href="#five-lights-title">The Five Lights</a>
         <a href="#manifesto-title">Manifesto</a>
         <a href="#lanterns-title">Lanterns</a>
+        <a href="#how-we-think-title">How We Think</a>
         <a href="#ethics-title">Ethics</a>
         <a href="#purpose-title">The Purpose of Life</a>
         <a href="#effort-title">Effort and Value</a>
@@ -493,7 +566,6 @@
       </div>
     </nav>
 
-    <br/>
 
     <div class="divider divider-intro" aria-hidden="true">
       <span class="divider-line"></span>
@@ -538,7 +610,7 @@
           <span class="dot light4" aria-hidden="true"></span>
           <p>
             <strong>4.</strong>
-            Every life has value.
+            Life has value.
           </p>
         </li>
 
@@ -582,12 +654,9 @@
       
       <p>
         <strong>Freedom is the default.</strong>
-        We believe that people naturally seek to grow, develop, pursue what they value, and shape their lives, and we seek to create the freedom and space for them to do so. Each person has the final say over their own life, body, gender, sexual orientation, beliefs, thoughts, and identity.
-        We reject imposed hierarchy and favor free participation, voluntary cooperation, and collective decision-making over
-        authority and domination.
-        Different ways of living should be protected unless they cause serious harm to others.
-        We defend freedom of belief and neither affirm nor deny supernatural realities.
-        We remain open to questioning what we believe we know and to revising our understanding when stronger reasons emerge.
+        We believe that every person has a natural desire to grow, develop, pursue what they value, and shape their lives, and we seek to create the freedom and space for them to do so. Each person has the final say over their own life, body, gender, sexual orientation, beliefs, thoughts, and identity.
+        We trust people before treating them as potential wrongdoers, and favor voluntary cooperation and local self-governance over imposed authority.
+        Different ways of living should be protected unless they cause serious harm to others. We defend freedom of belief and neither affirm nor deny supernatural realities. We remain open to questioning what we believe we know and to revising our understanding when stronger reasons emerge.
       </p>
       
       <p>
@@ -596,8 +665,8 @@
       </p>
       
       <p>
-        <strong>Every life has value.</strong>
-        We value the lives, conscious experiences, curiosity, and capacity for growth of humans and other living beings.
+        <strong>Life has value.</strong>
+        We value life and the living world.
         We do not see nature merely as a resource for human use.
         We consider friendship, solidarity, sharing, socializing, and creating together to be important parts of human life.
         A free individual does not have to be a solitary individual.
@@ -631,11 +700,37 @@
       </p>
 
       <p>
-        For us, this light is reason, logic, knowledge, curiosity, and free thought. Lanterns do not seek to illuminate
-        the world with one great answer; they reveal errors, create new ideas, share knowledge, and explore the
-        possibility
-        of better conditions for life.
+        For us, this light is reason, logic, knowledge, curiosity, and free thought. Lanterns do not seek to illuminate the world with one great answer; they reveal errors, create new ideas, share knowledge, and explore the possibility of better conditions for life.
       </p>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+    
+      <svg class="divider-flame" viewBox="0 0 24 24">
+        <path d="M12 2S5 9.5 5 14.5C5 18.09 8.13 21 12 21S19 18.09 19 14.5C19 9.5 12 2 12 2Z" fill="var(--flame)" />
+      </svg>
+    
+      <span class="divider-line"></span>
+    </div>
+
+
+    <section class="block" aria-labelledby="how-we-think-title">
+      <h2 id="how-we-think-title">How We Think</h2>
+    
+      <p>
+        We begin by defining the question clearly and separating the problem into its relevant parts. We distinguish what we know from what we assume, gather available evidence, knowledge and experience, and consider both supporting and opposing views. We actively look for weaknesses in our own reasoning and welcome criticism, including perspectives that challenge our preferred conclusions. Some principles begin not as conclusions, but as starting points for how we understand human life and what we seek to
+        protect.
+      </p>
+    
+      <p>
+        We then consider the possible paths forward. Rather than limiting ourselves to the most obvious choices, we look for alternative approaches and examine their likely consequences, including effects on freedom, well-being, relationships, trust, and the wider living world. When our values come into conflict, we weigh them according to their importance in the situation and the strength of the reasons behind them. A decision supported by more people is not automatically a better one; our shared values and the reasons supporting each choice must also be considered.
+      </p>
+    
+      <p>
+        We seek the strongest available conclusion rather than certainty. Those affected by a decision should have a meaningful opportunity to understand the alternatives and contribute their views, while evidence, reason, and ethical principles remain part of the judgment. We then choose the best-supported course of action, observe its consequences, and remain willing to reconsider it when experience, evidence, or better alternatives give us reason to do so.
+      </p>
+
     </section>
 
 
@@ -654,7 +749,7 @@
       <h2 id="ethics-title">Ethics</h2>
 
       <p>
-        We value human beings and all life, giving greater ethical consideration to beings we have reason to believe are capable of experience, well-being, or pursuing interests of their own. We also value the integrity and continuity of the natural world and its living systems. We seek to preserve life, freedom, growth, and the conditions for living beings to flourish.
+        We value human beings and all life, giving greater ethical consideration to beings we have reason to believe are capable of experience, well-being, or pursuing interests of their own. We also value the integrity and continuity of the natural world and its living systems. These values guide our ethical judgments, while the circumstances, reasons, evidence, and consequences help us determine how they should be applied.
       </p>
 
       <p>
@@ -664,9 +759,9 @@
       </p>
 
       <p>
-        Freedom may be restricted only when there is a sufficiently strong risk of serious harm to another ethically
-        significant being. Serious harm may be physical, psychological, or a substantial impairment of well-being.
-        Our understanding of harm should be informed by concrete cases and remain open to revision as new evidence and experience emerge.
+        Freedom should be restricted only when necessary to prevent serious harm to another ethically significant being.
+        We prefer the least restrictive response capable of addressing the harm, and remain open to revising our understanding
+        as evidence and experience emerge.
       </p>
 
       <p>
@@ -777,10 +872,6 @@
         Thomas Kuhn, Daniel Dennett, Peter Singer, Carl Sagan, anarchist thought, humanism, existentialism, pragmatism, and Bayesian reasoning. We do not treat any of them as authorities, but as sources of ideas to examine, question, combine, and revise.
       </p>
 
-      <p>
-        The Lantern Philosophy builds on ideas from many traditions. It brings different traditions into conversation and explores how they might work together within a coherent, revisable framework.
-      </p>
-
     </section>
 
     <div class="divider" aria-hidden="true">
@@ -837,13 +928,28 @@
 
   <footer class="footer">
     <p>
-      &copy; <span id="year"></span> The Lantern Philosophy. All rights reserved.
+      &copy; <span id="year"></span> The Lantern Philosophy. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener">CC BY 4.0</a>.
     </p>
   </footer>
 
+  <button type="button" class="to-top" id="toTop" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const toTop = document.getElementById("toTop");
+
+    window.addEventListener("scroll", () => {
+      toTop.classList.toggle("visible", window.scrollY > window.innerHeight * 0.9);
+    }, {passive: true});
+
+    toTop.addEventListener("click", () => {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    });
   </script>
 
 </body>
