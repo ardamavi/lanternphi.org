@@ -552,6 +552,25 @@
       }
     }
 
+    @media print {
+
+      @page {
+        margin: 0;
+      }
+
+      html, body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .hero-glow,
+      body::before,
+      body::after,
+      .to-top {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 
